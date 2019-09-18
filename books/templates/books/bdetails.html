@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <style>
+
+        .detaul_page{
+        background:#eee;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="col-md-6"><img src="{{book.book_image.url}}" width="100%"></div>
+    <div class="col-md-6">
+        <div class="detaul_page">
+            <h1>{{book.book_name}}</h1>
+            <h4>{{book.book_desc}}}</h4>
+            <h4>Rs.{{book.book_price}}</h4>
+            <a href="" class="btn btn-link">Buy</a>
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

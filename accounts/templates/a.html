@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('button').click(function(){
+    var text = $('#mytext').text();
+    var charsLength = text.length;
+    var wordsCount = text.split('').length;
+    alert(wordsCount);
+
+    });
+});
+</script>
+</head>
+<body>
+<button>click Me</button>
+<textarea id="mytext">this sii ssdfjsd fjf dslfjsklfdslkfk</textarea>
+
+
+</body>
+</html>

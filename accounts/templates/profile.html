@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+    body{
+    font-family: monospace;
+    }
+     img{
+    width:72px;
+    height:72px;
+    animation:wheel 1s linear infinite;
+}
+
+@keyframes wheel{
+    100%{
+    transform:rotate(360deg);
+    }
+
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+welcome,
+<h1>
+username:--{{u.username}}<br>
+Mera password:--{{u.password}}<br>
+Meri Eamil:--{{u.email}}<br>
+Mobile:--{{u.mobile}}<br>
+
+    <a href="{% url 'logout'%}">Logout</a>
+    <a href="{% url 'editprofile'%}" class="btn btn-info">EditProfile</a>
+
+
+    </h1>
+
+    <h1 style="color:red"> {{upro.user.mobile}}</h1>
+    <h2>{{upro.full_name}}</h2>
+    <h2>{{upro.city}}</h2>
+    <h2>{{upro.dob}}</h2>
+    <h2><img src="{{upro.pic.url}}"></h2>
+
+    </div>
+</body>
+</html>

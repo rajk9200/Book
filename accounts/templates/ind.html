@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+  <script>
+$(document).ready(function(){
+  $("button").click(function(){
+    var a=('dd').val();
+    $.ajax({
+    url: "http://127.0.0.1:8000/profile/",
+    data:{'a':a}
+
+    success: function(result){
+         $("#rs").html(result);
+    }});
+  });
+});
+</script>
+
+</head>
+<body>
+
+<button>CLick Me</button>
+
+<div id="rs"></div>
+
+</body>
+</html>

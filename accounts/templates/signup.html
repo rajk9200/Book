@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+$(document).ready(function(){
+$("input").addClass("form-control");
+  });
+
+</script>
+
+<style>
+    .myform{
+    width: 30%;
+    background: #007bff;
+    padding: 10px;
+    margin: auto;
+    margin-top: 5%;
+    }
+    label{
+    color:white;
+
+    }
+</style>
+<div class=" container">
+    <div class="myform">
+        <form method="post">
+            {% csrf_token %}
+
+            {{form.as_p}}
+
+
+
+            {% block mybtn %}
+            <button type="submit" class="btn btn-success">Signup</button>
+            <a href="{% url 'login'%}" class="btn btn-danger">Login</a>
+
+            {% endblock%}
+        </form>
+
+
+    </div>
+</div>
+</body>
+</html>
